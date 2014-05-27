@@ -227,14 +227,16 @@ public class Main extends Application {
 
 	private void convertArrayToList(Double xArray[], Double yArray[]) {
 
-		List<Double> newx = new ArrayList<Double>(Arrays.asList(xArray));
-		List<Double> newy = new ArrayList<Double>(Arrays.asList(yArray));
+		if (xArray != null && yArray != null) {
+			List<Double> newx = new ArrayList<Double>(Arrays.asList(xArray));
+			List<Double> newy = new ArrayList<Double>(Arrays.asList(yArray));
 
-		newx.removeAll(Collections.singleton(null));
-		newy.removeAll(Collections.singleton(null));
+			newx.removeAll(Collections.singleton(null));
+			newy.removeAll(Collections.singleton(null));
 
-		xList = newx;
-		yList = newy;
+			xList = newx;
+			yList = newy;
+		}
 
 	}
 
