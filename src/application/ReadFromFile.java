@@ -17,31 +17,31 @@ public class ReadFromFile {
 
 	public void read() {
 
-//		xArray = new Double[MAX_ARRAY_LENGTH];
-//		yArray = new Double[MAX_ARRAY_LENGTH];
-//
-//		File file = new File(FILE_NAME);
-//		Scanner sc = null;
-//		try {
-//			sc = new Scanner(file);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
-//
-//		if (sc != null) {
-//			int count = 0;
-//			sc.useDelimiter(";");
-//			while (sc.hasNext()) {
-//				System.out.println("Read count: " + count);
-//				String current = sc.next();
-//				String[] stringArray = current.split(",");
-//				Double x = Double.parseDouble(stringArray[0]);
-//				Double y = Double.parseDouble(stringArray[1]);
-//				xArray[count] = x;
-//				yArray[count] = y;
-//				count ++;
-//			}
-//		}
+		xArray = new Double[MAX_ARRAY_LENGTH];
+		yArray = new Double[MAX_ARRAY_LENGTH];
+
+		File file = new File(FILE_NAME);
+		Scanner sc = null;
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		if (sc != null) {
+			int count = 0;
+			sc.useDelimiter(";");
+			while (sc.hasNext()) {
+				System.out.println("Read count: " + count);
+				String current = sc.next();
+				String[] stringArray = current.split(",");
+				Double x = Double.parseDouble(stringArray[0]);
+				Double y = Double.parseDouble(stringArray[1]);
+				xArray[count] = x;
+				yArray[count] = y;
+				count ++;
+			}
+		}
 
 	}
 
